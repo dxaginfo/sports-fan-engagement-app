@@ -1,0 +1,36 @@
+{
+  "name": "fan-engagement-idea-generator",
+  "version": "1.0.0",
+  "description": "A web app to help sports teams and brands generate personalized fan engagement ideas",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "seed": "node database/seeds.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "keywords": [
+    "sports",
+    "fan engagement",
+    "idea generator",
+    "marketing",
+    "engagement strategies"
+  ],
+  "author": "Sports Marketing Team",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.21"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
